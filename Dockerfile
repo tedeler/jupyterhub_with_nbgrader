@@ -20,6 +20,7 @@ RUN jupyter serverextension enable --sys-prefix --py nbgrader
 RUN pip install jupyterhub-dummyauthenticator
 
 ADD jupyterhub_config.py jupyterhub_config.py
+ADD nbgrader_config.py /etc/jupyter/nbgrader_config.py
 
 RUN mkdir /srv/nbgrader
 RUN mkdir /srv/nbgrader/exchange
